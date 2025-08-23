@@ -1,12 +1,12 @@
 {
-    "name": "Learning Python",
+    "name": "Revising Python",
     "image": "aiml-base:latest",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.13" // Specify the Python version you want
         }
     },
-    "postCreateCommand": "pip install -r requirements.txt",
+    "postCreateCommand": "pip install uv && uv init && uv pip install --system jupyter ipykernel notebook matplotlib pandas pytest requests numpy cline",
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind"
     ],
@@ -17,7 +17,11 @@
                 "ms-python.python",
                 "ms-python.black-formatter",
                 "ms-toolsai.jupyter",
-                "ms-python.isort"
+                "ms-python.isort",
+                "ms-python.vscode-pylance",
+                "ms-python.flake8",
+                "ms-python.pylint",
+                "ms-python.vscode-pytest"
             ]
         }
     },

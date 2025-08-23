@@ -1,1 +1,2 @@
 uv
+# jupyter ipykernel notebook matplotlib pandas pytest requests numpy cline
