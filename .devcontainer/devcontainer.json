@@ -6,7 +6,7 @@
             "version": "3.13" // Specify the Python version you want
         }
     },
-    "postCreateCommand": "pip install uv && uv init && uv pip install --system jupyter ipykernel notebook matplotlib pandas pytest requests numpy cline",
+    "postCreateCommand": "pip install uv && pip install -r .devcontainer/requirements.txt",
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind"
     ],
